@@ -104,7 +104,7 @@ def preprocess_all(text_files, add_stop_words):
   additional_stopwords = content.split(",")
   my_file.close()
   all_sw += additional_stopwords
-  df_raw, df_counts, df_counts_new, x_train_rus, x_rus, dictionary, corpus = preprocess(text_files, 'interview_lemmatized.xlsx', 2, 3, additional_stopwords)
+  df_raw, df_counts, df_counts_new, x_train_rus, x_rus, dictionary, corpus = preprocess(text_files, 'data/interview_lemmatized.xlsx', 2, 3, additional_stopwords)
   print('Here is your words frequencies. Please check what words you want to add to stop list and add them to additional stopwords list.')
   print(df_counts_new[0:30])
   dictionary.save('data/dictionary')

@@ -1,0 +1,17 @@
+flask
+googletrans==4.0.0rc1 # because earlier version has problem with google's "do you accept cookies"
+nltk
+stop-words
+pymystem3
+requests
+gensim
+openpyxl
+scikit-learn
+umap-learn
+transformers
+pandas
+hdbscan
+langdetect
+torchvision
+
+

@@ -61,7 +61,7 @@ def lemmatize_all(text_file):
     df['paragraphs'] = df['paragraphs'].apply(delete_stop_words)
     df['paragraphs'] = df['paragraphs'].apply(delete_eng)
     print('Your file is lemmatized. Please find enclosed interview_lemmatized.xlsx')
-    return df.to_excel('interview_lemmatized.xlsx')
+    return df.to_excel('data/interview_lemmatized.xlsx')
 
 
 def lemmatize_all_eng(text_file):
@@ -117,4 +117,4 @@ def lemmatize_all_eng(text_file):
         return ' '.join(clear_text)
     df['paragraphs'] = df['paragraphs'].apply(delete_stop_words)
     print('Your file is lemmatized. Please find enclosed interview_lemmatized.xlsx')
-    return df.to_excel('interview_lemmatized.xlsx')
+    return df.to_excel('data/interview_lemmatized.xlsx')
