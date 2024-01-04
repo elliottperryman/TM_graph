@@ -15,7 +15,7 @@ import tqdm
 # from gensim import corpora
 # from gensim.models import CoherenceModel
 # from tqdm.notebook import tqdm 
-# import keras
+import keras
 # from keras.layers import Input, Dense
 # from keras.models import Model
 from sklearn.model_selection import train_test_split
@@ -111,8 +111,8 @@ class Topic_Model(object):
 
 
         """Get vector representations from selected methods"""
-        dictionary = corpora.Dictionary.load('./dictionary')
-        corpus = corpora.MmCorpus('./corpus')
+        dictionary = corpora.Dictionary.load('./data/dictionary')
+        corpus = corpora.MmCorpus('./data/corpus')
         with open("data/x_train_rus", "rb") as fp:   # Unpickling
             x_train_rus = pickle.load(fp)
         if method is None:
@@ -206,8 +206,8 @@ class Topic_Model(object):
         import pickle
         import numpy as np
 
-        dictionary = corpora.Dictionary.load('./dictionary')
-        corpus = corpora.MmCorpus('./corpus')  
+        dictionary = corpora.Dictionary.load('./data/dictionary')
+        corpus = corpora.MmCorpus('./data/corpus')  
         with open("data/x_train_rus", "rb") as fp:   # Unpickling
             x_train_rus = pickle.load(fp)     
         x_train_rus_clear = []
