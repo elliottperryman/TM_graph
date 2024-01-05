@@ -1,8 +1,10 @@
+import stop_words
+import pymystem3
+import pandas as pd
+from nltk.stem import WordNetLemmatizer
+import nltk
 
 def lemmatize_all(text_file):
-    import stop_words
-    import pymystem3
-    import pandas as pd
     print('Lemmatizing...')
 
     def getText(tex):
@@ -65,13 +67,8 @@ def lemmatize_all(text_file):
 
 
 def lemmatize_all_eng(text_file):
-    from nltk.stem import WordNetLemmatizer
-    import nltk
-  
     lemmatizer = WordNetLemmatizer()
-    import stop_words
-    import pymystem3
-    import pandas as pd
+
     print('Lemmatizing...')
     def getText(tex):
         with open(tex) as f:

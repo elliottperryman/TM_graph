@@ -7,8 +7,10 @@ from werkzeug.utils import secure_filename
 from Make_graph_from_TM import make_graph_big, translate_to_eng
 import shutil
 import pickle
+import ast
 from googletrans import Translator
 translator = Translator()
+import nltk
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
@@ -97,7 +99,6 @@ def data():
 
 @app.route('/my-translate/')
 def my_translate():
-  import ast
   clear_nodes = []
   clear_links = []
   with open(r'data/clear_nodes', 'r') as fp:

@@ -1,11 +1,16 @@
+from TM import Topic_Model
+from gensim import corpora
+import ast
+import json
+import warnings
+import random
+from googletrans import Translator
+translator = Translator()
+import json
+
 def make_graph_big(method, k):
 
-    from TM import Topic_Model
-    from gensim import corpora
-    import ast
-    import json
-    import warnings
-    import random
+
     # from googletrans import Translator
 
     warnings.filterwarnings('ignore')
@@ -120,9 +125,7 @@ def make_graph_big(method, k):
 
   
 def translate_to_eng(clear_nodes, clear_links):
-    from googletrans import Translator
-    translator = Translator()
-    import json
+
 
         #Translation module        
     eng_nodes = []

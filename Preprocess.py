@@ -1,15 +1,15 @@
+import nltk
+import gensim
+import stop_words
+import pandas as pd
+import nltk.data
+from gensim import corpora
+import stop_words
+import pickle
+
+
 def preprocess_all(text_files, add_stop_words):
-  import nltk
-  import gensim
-  import stop_words
-  import pandas as pd
-  import nltk.data
-  from gensim import corpora
-  import stop_words
-  import pickle
-  nltk.download('stopwords')
-  nltk.download('wordnet')
-  nltk.download('punkt')
+
   rus = stop_words.get_stop_words('russian')
   en = stop_words.get_stop_words('english')
   all_sw = rus + en
